@@ -1,0 +1,69 @@
+/* social-share: row of share icons (mobile/tablet), vertical rail on desktop */
+.social-share .social-share-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-share .social-share-list li {
+  position: relative;
+  display: flex;
+}
+
+.social-share .social-share-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  color: var(--tru-purple-500);
+  cursor: pointer;
+}
+
+.social-share .social-share-link:hover,
+.social-share .social-share-link:focus {
+  border: 0;
+  background: var(--tru-purple-100);
+  color: var(--tru-purple-600);
+}
+
+.social-share .social-share-link:focus-visible {
+  outline: 2px solid var(--tru-purple-500);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.social-share .social-share-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.social-share .social-share-status {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  transform: translateY(-50%);
+  font-size: var(--body-font-size-xs);
+  white-space: nowrap;
+  color: var(--tru-purple-900);
+}
+
+.social-share .social-share-status:empty {
+  display: none;
+}
+
+@media (width >= 1200px) {
+  .social-share .social-share-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "variantName": "cards-offer",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "product-offer",
+    "imagePattern": "noimg",
+    "structure": "per card: eyebrow + subheading + body + outlined CTA + link"
+  },
+  "contentPattern": {
+    "structure": "4 rows, 1 column: [<p>eyebrow</p><h3>heading</h3><p>body (+ inline link/footnote)</p><p><em><a>outlined CTA</a></em></p><p><a>Learn more</a></p>]",
+    "buttonCount": 8,
+    "imageCount": 0
+  },
+  "options": [],
+  "memberVariantIds": [
+    "cards-offer"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:04:11.249Z"
+  }
+}

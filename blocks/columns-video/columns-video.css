@@ -1,0 +1,121 @@
+/* columns-video — Truist brand video (values from truist.com .radius-40.bg-sky-blue-ltr) */
+.columns-video > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-video .columns-video-text-col > * {
+  margin: 0 0 30px;
+}
+
+.columns-video .columns-video-text-col > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-video .columns-video-text-col :is(h2, h3) {
+  color: var(--tru-purple-900);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.columns-video .columns-video-text-col p {
+  color: var(--tru-gray-600);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.columns-video a.button:any-link {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.columns-video .columns-video-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.columns-video .columns-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--tru-purple-900);
+}
+
+.columns-video .columns-video-iframe,
+.columns-video .columns-video-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.columns-video .columns-video-poster {
+  cursor: pointer;
+}
+
+.columns-video .columns-video-poster picture,
+.columns-video .columns-video-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Wistia-style centered play button */
+.columns-video .columns-video-play,
+.columns-video button.columns-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 64px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: rgb(46 26 71 / 85%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.columns-video button.columns-video-play:hover,
+.columns-video button.columns-video-play:focus {
+  background-color: var(--tru-purple-500);
+}
+
+.columns-video .columns-video-play::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #fff;
+  transform: translate(-50%, -50%);
+}
+
+@media (width >= 900px) {
+  .columns-video > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 57px;
+  }
+
+  .columns-video > div > div {
+    flex: 398 1 0;
+  }
+
+  .columns-video > div > .columns-video-media-col {
+    flex: 683 1 0;
+  }
+
+  .columns-video .columns-video-text-col :is(h2, h3) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}

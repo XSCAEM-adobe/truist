@@ -3,11 +3,14 @@
   overflow-x: auto;
 }
 
+/* separate borders so the purple header can keep rounded corners */
 .table table {
   width: 100%;
   max-width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: var(--body-font-size-xs);
+  color: var(--tru-purple-900);
 }
 
 @media (width >= 600px) {
@@ -22,23 +25,40 @@
   }
 }
 
-.table table thead tr {
-  border-top: 2px solid #dadada;
-  border-bottom: 2px solid #dadada;
-}
-
-.table table tbody tr {
-  border-bottom: 1px solid #dadada;
+.table table caption {
+  caption-side: top;
+  padding: 0 0 15px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  color: var(--tru-purple-900);
 }
 
 .table table th {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .table table th,
 .table table td {
-  padding: 0.5em;
+  padding: 16px 20px;
+  line-height: 1.5;
   text-align: left;
+  vertical-align: top;
+}
+
+.table table thead th,
+.table table thead td {
+  background-color: rgb(124 105 146);
+  color: #fff;
+}
+
+.table table thead tr > :first-child {
+  border-top-left-radius: 10px;
+}
+
+.table table thead tr > :last-child {
+  border-top-right-radius: 10px;
 }
 
 .table table th p,
@@ -50,14 +70,37 @@
   margin-top: 0.25em;
 }
 
+@media (width >= 900px) {
+  .table table th,
+  .table table td {
+    padding: 20px 36px;
+  }
+
+  .table table caption {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .table table thead th {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 /* no header variant */
-.table.no-header table tbody tr {
+.table.no-header table tbody tr:first-child > * {
   border-top: 1px solid #dadada;
 }
 
-/* striped variant */
-.table.striped tbody tr:nth-child(odd) {
-  background-color: var(--light-color);
+/* striped variant (Truist: every second body row is shaded) */
+.table.striped table tbody tr:nth-child(even) > * {
+  background-color: var(--tru-off-white);
+}
+
+/* row-headers variant: first column holds th[scope=row] */
+.table.row-headers table tbody th[scope='row'] {
+  font-weight: 600;
+  color: var(--tru-purple-900);
 }
 
 /* bordered variant */

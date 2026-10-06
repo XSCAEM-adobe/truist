@@ -1,0 +1,32 @@
+{
+  "variantName": "columns-sidebar",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "mixed (white text col + midnight-purple aside)",
+    "density": "minimal",
+    "purpose": "text-with-aside",
+    "imagePattern": "noimg",
+    "structure": "paragraph + label + list"
+  },
+  "contentPattern": {
+    "structure": "1 row x 2 cells. Left cell: body paragraph(s). Right cell: a short label paragraph (e.g. 'Examples of collateral:') followed by a bulleted list - rendered as a dark purple rounded box. Columns stack on mobile. Add more rows for more text/aside pairs",
+    "imageCount": 0,
+    "buttonCount": 0
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-sidebar"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/secured-vs-unsecured-loans",
+        "instanceId": null,
+        "screenshot": null
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}

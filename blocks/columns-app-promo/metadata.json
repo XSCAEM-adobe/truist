@@ -1,0 +1,32 @@
+{
+  "variantName": "columns-app-promo",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "app-promo",
+    "imagePattern": "large",
+    "structure": "image + eyebrow + title + body + CTA + QR card"
+  },
+  "contentPattern": {
+    "structure": "1 row, 2 columns: [phone image | <p>eyebrow \"Meet the Truist Mobile App\"</p><h2>Your bank in your pocket.</h2><p>body + footnotes</p><p><a>Get details</a></p><p>QR image</p><p>Scan this code...</p>]",
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-app-promo"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:04:37.041Z"
+  }
+}

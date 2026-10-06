@@ -1,0 +1,32 @@
+{
+  "variantName": "cards-promo-mosaic",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "minimal",
+    "purpose": "promo-mosaic",
+    "imagePattern": "multiple",
+    "structure": "per card: eyebrow + title + body + 2 CTAs"
+  },
+  "contentPattern": {
+    "structure": "3 rows, 2 columns: [optional image | <p>eyebrow</p><h2>heading</h2><p>body</p><p><strong><a>primary CTA</a></strong> <a>Learn more</a></p>]. Rows 1-2 have empty image cell.",
+    "buttonCount": 6,
+    "imageCount": 1
+  },
+  "options": [],
+  "memberVariantIds": [
+    "cards-promo-mosaic"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:03:50.748Z"
+  }
+}

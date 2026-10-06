@@ -1,0 +1,81 @@
+/* columns-spotlight — Truist sponsorship feature (values from truist.com .radius-40.bg-mist) */
+.columns-spotlight {
+  overflow: hidden;
+  border-radius: 40px;
+  background-color: var(--tru-purple-100);
+}
+
+.columns-spotlight > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.columns-spotlight .columns-spotlight-img-col picture,
+.columns-spotlight .columns-spotlight-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.columns-spotlight .columns-spotlight-text-col > * {
+  margin: 0 0 30px;
+}
+
+.columns-spotlight .columns-spotlight-text-col > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-spotlight .columns-spotlight-text-col > p.columns-spotlight-logo {
+  margin-bottom: 20px;
+}
+
+.columns-spotlight .columns-spotlight-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 48px;
+}
+
+.columns-spotlight .columns-spotlight-text-col :is(h2, h3) {
+  color: var(--tru-purple-900);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.columns-spotlight .columns-spotlight-text-col > p {
+  color: var(--tru-gray-600);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.columns-spotlight a.button:any-link {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (width >= 900px) {
+  .columns-spotlight > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+    padding: 40px 55px;
+  }
+
+  .columns-spotlight .columns-spotlight-img-col {
+    flex: 550 1 0;
+  }
+
+  .columns-spotlight .columns-spotlight-text-col {
+    flex: 605 1 0;
+  }
+
+  .columns-spotlight .columns-spotlight-text-col :is(h2, h3) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}

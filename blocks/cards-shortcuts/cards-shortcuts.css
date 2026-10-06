@@ -1,0 +1,152 @@
+/* cards-shortcuts — Truist "What can we help you with?" slider (values from truist.com .item-slider) */
+main > .section.cards-shortcuts-container > .cards-shortcuts-wrapper {
+  max-width: none;
+  padding: 0 10px;
+}
+
+.cards-shortcuts .cards-shortcuts-viewport {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cards-shortcuts .cards-shortcuts-track {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.cards-shortcuts .cards-shortcuts-track::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-shortcuts .cards-shortcuts-item {
+  flex: 0 0 calc((100% - 16px) / 3);
+  scroll-snap-align: start;
+}
+
+.cards-shortcuts .cards-shortcuts-tile {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  min-height: 133px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 12.5px;
+  color: var(--tru-purple-900);
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.cards-shortcuts .cards-shortcuts-tile:hover,
+.cards-shortcuts .cards-shortcuts-tile:focus-visible {
+  border-color: var(--tru-purple-500);
+  outline: none;
+  color: var(--tru-purple-500);
+}
+
+.cards-shortcuts .cards-shortcuts-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.cards-shortcuts .cards-shortcuts-icon picture,
+.cards-shortcuts .cards-shortcuts-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cards-shortcuts .cards-shortcuts-label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* round purple arrow buttons */
+.cards-shortcuts .cards-shortcuts-nav,
+.cards-shortcuts button.cards-shortcuts-nav {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background-color: var(--tru-purple-500);
+  color: #fff;
+  cursor: pointer;
+}
+
+.cards-shortcuts button.cards-shortcuts-nav:hover,
+.cards-shortcuts button.cards-shortcuts-nav:focus {
+  background-color: var(--tru-purple-600);
+}
+
+.cards-shortcuts .cards-shortcuts-nav[hidden] {
+  display: none;
+}
+
+.cards-shortcuts button.cards-shortcuts-nav:disabled,
+.cards-shortcuts button.cards-shortcuts-nav:disabled:hover {
+  background-color: var(--tru-mist-dk);
+  cursor: default;
+}
+
+.cards-shortcuts .cards-shortcuts-prev::before,
+.cards-shortcuts .cards-shortcuts-next::before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: auto;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+}
+
+.cards-shortcuts .cards-shortcuts-prev::before {
+  transform: translateX(1px) rotate(-135deg);
+}
+
+.cards-shortcuts .cards-shortcuts-next::before {
+  transform: translateX(-1px) rotate(45deg);
+}
+
+@media (width >= 600px) {
+  .cards-shortcuts .cards-shortcuts-item {
+    flex-basis: calc((100% - 24px) / 4);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-shortcuts .cards-shortcuts-item {
+    flex-basis: calc((100% - 40px) / 6);
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-shortcuts .cards-shortcuts-track {
+    justify-content: center;
+  }
+
+  .cards-shortcuts .cards-shortcuts-item {
+    flex: 0 0 155px;
+  }
+}

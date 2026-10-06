@@ -1,0 +1,32 @@
+{
+  "variantName": "columns-spotlight",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "sponsorship-feature",
+    "imagePattern": "large",
+    "structure": "image + logo + title + body + CTA"
+  },
+  "contentPattern": {
+    "structure": "1 row, 2 columns: [team photo | <p>logo lockup image</p><h2>Miami Dolphins: Beyond the Field</h2><p>body</p><p><strong><a>Learn more</a></strong></p>]",
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-spotlight"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:05:57.797Z"
+  }
+}

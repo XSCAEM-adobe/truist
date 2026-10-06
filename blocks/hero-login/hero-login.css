@@ -1,0 +1,280 @@
+/* hero-login — Truist hero with sign-in panel (values from truist.com .hero-login-component) */
+main > .section.hero-login-container > .hero-login-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.hero-login {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  color: var(--tru-purple-900);
+}
+
+.hero-login .hero-login-stage {
+  position: relative;
+  display: grid;
+  grid-template-areas: 'stage';
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.hero-login .hero-login-media,
+.hero-login .hero-login-content {
+  grid-area: stage;
+}
+
+.hero-login .hero-login-media picture,
+.hero-login .hero-login-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-login .hero-login-content {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  max-width: 417px;
+  padding: 32px 24px;
+}
+
+.hero-login .hero-login-content > * {
+  margin: 0 0 20px;
+}
+
+.hero-login .hero-login-content > p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-login .hero-login-content > p.hero-login-eyebrow {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.hero-login .hero-login-content h1 {
+  color: var(--tru-purple-900);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.hero-login .hero-login-content sup a {
+  color: inherit;
+  font-size: 12px;
+}
+
+.hero-login .hero-login-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+}
+
+.hero-login .hero-login-actions p {
+  margin: 0;
+}
+
+/* sign-in panel */
+.hero-login .hero-login-signin {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--tru-purple-900);
+  color: #fff;
+}
+
+.hero-login .hero-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* white input box with floating label */
+.hero-login .hero-login-field {
+  position: relative;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: #fff;
+}
+
+.hero-login .hero-login-field label {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  color: var(--tru-gray-600);
+  font-size: 16px;
+  line-height: 22px;
+  pointer-events: none;
+  transition: 0.15s ease-in-out;
+}
+
+.hero-login .hero-login-field:focus-within label,
+.hero-login .hero-login-field:has(input:not(:placeholder-shown)) label {
+  top: 3px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.hero-login .hero-login-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 12px 56px 0 10px;
+  color: rgb(24 24 24);
+  font: inherit;
+  font-size: 16px;
+}
+
+.hero-login .hero-login-input:focus {
+  outline: 2px solid var(--tru-purple-500);
+  outline-offset: 0;
+}
+
+.hero-login .hero-login-field .hero-login-toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  min-height: 36px;
+  margin: 0;
+  border: 0;
+  padding: 0 8px;
+  background: none;
+  color: var(--tru-purple-500);
+  font-size: 14px;
+  font-weight: 700;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.hero-login .hero-login-field .hero-login-toggle:hover,
+.hero-login .hero-login-field .hero-login-toggle:focus {
+  background: none;
+  color: var(--tru-purple-600);
+}
+
+.hero-login .hero-login-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: -4px;
+}
+
+.hero-login .hero-login-row-end {
+  justify-content: flex-end;
+}
+
+.hero-login .hero-login-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.hero-login .hero-login-check input {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--tru-purple-500);
+}
+
+.hero-login .hero-login-signin a:any-link {
+  color: rgb(201 199 255);
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.hero-login .hero-login-signin a:hover {
+  color: #fff;
+}
+
+.hero-login .hero-login-submit,
+.hero-login button.hero-login-submit {
+  width: 100%;
+  height: 48px;
+  margin: 4px 0 0;
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 20px;
+  background-color: rgb(166 163 224);
+  color: var(--tru-purple-900);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.hero-login button.hero-login-submit:hover,
+.hero-login button.hero-login-submit:focus {
+  background-color: rgb(201 199 255);
+  color: var(--tru-purple-900);
+}
+
+.hero-login .hero-login-signin-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-login .hero-login-signin-links p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-login .hero-login-signin-lead {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* "Need a user ID?" sits directly under Sign in; the remaining links form a group */
+.hero-login .hero-login-signin-links p:nth-child(2) {
+  margin-top: 20px;
+}
+
+.hero-login .hero-login-signin-links p:last-child a:any-link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero-login .hero-login-signin-links p:last-child a::after {
+  content: ' \2192';
+}
+
+@media (width >= 900px) {
+  main > .section.hero-login-container > .hero-login-wrapper {
+    padding: 24px 24px 0;
+  }
+
+  .hero-login {
+    grid-template-columns: minmax(0, 1fr) 383px;
+  }
+
+  .hero-login .hero-login-stage {
+    min-height: 450px;
+  }
+
+  .hero-login .hero-login-content {
+    padding: 64px 48px 32px;
+  }
+
+  .hero-login .hero-login-content > p.hero-login-eyebrow {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .hero-login .hero-login-content h1 {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+}

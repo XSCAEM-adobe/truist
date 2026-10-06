@@ -1,0 +1,44 @@
+/* disclosures-footnotes: small italic disclaimer + superscript-numbered citations */
+.disclosures-footnotes {
+  font-size: var(--body-font-size-xs);
+  line-height: 22px;
+  color: var(--tru-gray-600);
+}
+
+.disclosures-footnotes .disclosures-footnotes-list > * {
+  margin: 0 0 10px;
+}
+
+.disclosures-footnotes .disclosures-footnotes-list > :last-child {
+  margin-bottom: 0;
+}
+
+.disclosures-footnotes .disclosures-footnotes-note {
+  position: relative;
+  padding-left: 14px;
+  scroll-margin-top: 120px;
+}
+
+.disclosures-footnotes .disclosures-footnotes-marker {
+  position: absolute;
+  top: 0.35em;
+  left: 0;
+  font-size: 10px;
+  font-style: normal;
+}
+
+.disclosures-footnotes .disclosures-footnotes-note:focus {
+  outline: 2px solid var(--tru-purple-500);
+  outline-offset: 2px;
+}
+
+.disclosures-footnotes a:any-link {
+  color: var(--tru-purple-900);
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .disclosures-footnotes {
+    font-size: var(--body-font-size-s);
+  }
+}

@@ -1,0 +1,168 @@
+/* columns-app-promo — Truist mobile app promo (values from truist.com .policy_container_mobile-banking-feature-v2) */
+.columns-app-promo {
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: rgb(64 37 97);
+  color: rgb(219 219 219);
+}
+
+.columns-app-promo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-app-promo .columns-app-promo-img-col {
+  order: 1;
+  align-self: center;
+}
+
+.columns-app-promo .columns-app-promo-img-col picture,
+.columns-app-promo .columns-app-promo-img-col img {
+  display: block;
+  width: 100%;
+  max-width: 605px;
+  height: auto;
+}
+
+.columns-app-promo .columns-app-promo-text-col {
+  padding: 32px 24px 0;
+}
+
+.columns-app-promo .columns-app-promo-text-col > * {
+  margin: 0 0 30px;
+}
+
+.columns-app-promo .columns-app-promo-text-col > p.columns-app-promo-eyebrow {
+  margin-bottom: 20px;
+  color: rgb(176 224 226);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.5px;
+  text-transform: uppercase;
+}
+
+.columns-app-promo .columns-app-promo-text-col :is(h2, h3) {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.columns-app-promo .columns-app-promo-text-col > p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.columns-app-promo .columns-app-promo-text-col sup a:any-link {
+  color: rgb(201 199 255);
+  font-size: 12px;
+}
+
+/* "Get details" — outlined lavender CTA on dark */
+.columns-app-promo a.button:any-link {
+  border: 2px solid var(--tru-purple-900);
+  padding: 11px 22px;
+  color: rgb(201 199 255);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.columns-app-promo a.button:hover,
+.columns-app-promo a.button:focus {
+  border-color: rgb(201 199 255);
+  background-color: transparent;
+  color: #fff;
+}
+
+.columns-app-promo .columns-app-promo-text-col > p.button-container {
+  margin-bottom: 20px;
+}
+
+/* white QR card */
+.columns-app-promo .columns-app-promo-qr {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 550px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: #fff;
+  color: var(--tru-gray-600);
+}
+
+/* on small screens, store badges (when authored) replace the QR code */
+.columns-app-promo.columns-app-promo-has-badges .columns-app-promo-qr {
+  display: none;
+}
+
+.columns-app-promo .columns-app-promo-qr p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.columns-app-promo .columns-app-promo-qr-image {
+  flex: 0 0 auto;
+}
+
+.columns-app-promo .columns-app-promo-qr-image img {
+  display: block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: 4px solid var(--tru-purple-900);
+  border-radius: 15px;
+  padding: 5px;
+  object-fit: contain;
+}
+
+.columns-app-promo .columns-app-promo-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.columns-app-promo .columns-app-promo-badges p {
+  margin: 0;
+}
+
+.columns-app-promo .columns-app-promo-badges img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+@media (width >= 900px) {
+  .columns-app-promo > div {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 55px;
+  }
+
+  .columns-app-promo .columns-app-promo-img-col {
+    flex: 0 1 605px;
+    order: 0;
+    align-self: flex-end;
+  }
+
+  .columns-app-promo .columns-app-promo-text-col {
+    flex: 0 1 550px;
+    padding: 40px 110px 40px 0;
+  }
+
+  .columns-app-promo .columns-app-promo-text-col :is(h2, h3) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  /* QR code replaces store badges on large screens */
+  .columns-app-promo.columns-app-promo-has-badges .columns-app-promo-qr {
+    display: flex;
+  }
+
+  .columns-app-promo .columns-app-promo-badges {
+    display: none;
+  }
+}

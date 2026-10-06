@@ -1,0 +1,32 @@
+{
+  "variantName": "social-share",
+  "baseBlock": "social-share",
+  "canonicalModel": "auto-blocked",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "social-share",
+    "imagePattern": "icons",
+    "structure": "icon list"
+  },
+  "contentPattern": {
+    "structure": "No authored content. Inserted automatically by scripts.js on every page whose metadata Template is 'article' (right after the Hero Article block). Share links (Twitter, Facebook, LinkedIn, copy link) are built from the page URL and title. An empty 'Social Share' block may be authored manually on other pages",
+    "imageCount": 0,
+    "buttonCount": 1
+  },
+  "options": [],
+  "memberVariantIds": [
+    "social-share"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}

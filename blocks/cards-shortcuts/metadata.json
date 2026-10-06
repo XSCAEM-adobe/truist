@@ -1,0 +1,32 @@
+{
+  "variantName": "cards-shortcuts",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "purpose": "product-shortcut-slider",
+    "imagePattern": "icon",
+    "structure": "per card: icon + linked label"
+  },
+  "contentPattern": {
+    "structure": "8 rows, 2 columns: [icon image | <p><a href>Label</a></p>]",
+    "buttonCount": 0,
+    "imageCount": 8
+  },
+  "options": [],
+  "memberVariantIds": [
+    "cards-shortcuts"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:03:27.131Z"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark tiles on light-grey section",
+    "density": "minimal",
+    "purpose": "related-articles",
+    "imagePattern": "noimg",
+    "structure": "eyebrow + title + body + type/date meta | closing CTA tile"
+  },
+  "contentPattern": {
+    "structure": "One row per card, 1 cell. Article card: eyebrow paragraph (topic, e.g. 'Outsmarting debt'), H3 title linked to the article (the whole card becomes clickable), description paragraph, meta paragraph 'Article | 03/10/2024'. Closing CTA card: H3 heading + one link on its own line (rendered as a button); a card without eyebrow and meta is styled as the CTA tile. Place the block in a section with Section Metadata style 'light-grey' and an H2 'Related resources' above it",
+    "imageCount": 0,
+    "buttonCount": 1
+  },
+  "options": [],
+  "memberVariantIds": [
+    "cards-article"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}

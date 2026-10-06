@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "truist": {
+      "previewOrg": "XSCAEM-adobe",
+      "previewSite": "truist",
+      "contentHostUrl": "https://content.da.live/XSCAEM-adobe/truist/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

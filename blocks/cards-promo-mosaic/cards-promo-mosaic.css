@@ -1,0 +1,113 @@
+/* cards-promo-mosaic — Truist merch mosaic (values from truist.com .merch-two-col) */
+.cards-promo-mosaic > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  background-color: var(--tru-mist-dk);
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-has-image {
+  background-color: var(--tru-sky-blue-ltr);
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-image picture,
+.cards-promo-mosaic .cards-promo-mosaic-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-image {
+  aspect-ratio: 626 / 320;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 32px;
+  color: var(--tru-gray-600);
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-body > * {
+  margin: 0;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-actions p {
+  margin: 0;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-eyebrow {
+  margin-bottom: 8px;
+  color: var(--tru-gray-800);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-body :is(h2, h3, h4) {
+  margin: 0 0 8px;
+  color: var(--tru-purple-900);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-card-body p:not(.cards-promo-mosaic-eyebrow) {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cards-promo-mosaic .cards-promo-mosaic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (width >= 900px) {
+  .cards-promo-mosaic > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    gap: 30px 37px;
+  }
+
+  .cards-promo-mosaic .cards-promo-mosaic-card {
+    grid-column: 1;
+  }
+
+  .cards-promo-mosaic .cards-promo-mosaic-card-body :is(h2, h3, h4) {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .cards-promo-mosaic .cards-promo-mosaic-card-has-image {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+
+  .cards-promo-mosaic .cards-promo-mosaic-card-has-image .cards-promo-mosaic-card-image {
+    flex: 0 0 320px;
+    height: 320px;
+    aspect-ratio: auto;
+    overflow: hidden;
+  }
+
+  .cards-promo-mosaic .cards-promo-mosaic-card-has-image .cards-promo-mosaic-card-body {
+    justify-content: flex-start;
+  }
+}

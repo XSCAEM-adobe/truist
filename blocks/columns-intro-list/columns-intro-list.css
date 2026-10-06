@@ -1,0 +1,109 @@
+/* columns-intro-list — Truist fraud protection panel (values from truist.com .special-ankle) */
+.columns-intro-list {
+  overflow: hidden;
+  border-radius: 40px;
+  background-color: var(--tru-off-white);
+}
+
+.columns-intro-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 24px;
+}
+
+/* intro: centered icon, heading, copy */
+.columns-intro-list .columns-intro-list-intro {
+  text-align: center;
+}
+
+.columns-intro-list .columns-intro-list-intro > * {
+  margin: 0 0 8px;
+}
+
+.columns-intro-list .columns-intro-list-intro > p.columns-intro-list-icon {
+  margin-bottom: 20px;
+}
+
+.columns-intro-list .columns-intro-list-icon img {
+  display: block;
+  width: auto;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.columns-intro-list .columns-intro-list-intro :is(h2, h3) {
+  color: var(--tru-purple-900);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+.columns-intro-list .columns-intro-list-intro > p {
+  color: var(--tru-gray-600);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* list of linked articles, divided by rules */
+.columns-intro-list .columns-intro-list-item {
+  padding: 32px 0;
+}
+
+.columns-intro-list .columns-intro-list-item + .columns-intro-list-item {
+  border-top: 1px solid rgb(219 219 219);
+}
+
+.columns-intro-list .columns-intro-list-item > * {
+  margin: 0 0 8px;
+}
+
+.columns-intro-list .columns-intro-list-item > p.columns-intro-list-eyebrow {
+  color: var(--tru-gray-800);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.columns-intro-list .columns-intro-list-item :is(h2, h3, h4) {
+  color: var(--tru-purple-900);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.columns-intro-list .columns-intro-list-item > p {
+  color: var(--tru-gray-600);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.columns-intro-list .columns-intro-list-item > p.button-container {
+  margin: 24px 0 0;
+}
+
+@media (width >= 900px) {
+  .columns-intro-list > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 92px;
+    padding: 30px 110px;
+  }
+
+  .columns-intro-list > div > div {
+    flex: 1 1 0;
+  }
+
+  .columns-intro-list .columns-intro-list-item {
+    padding: 50px 0;
+  }
+
+  .columns-intro-list .columns-intro-list-item:first-child {
+    padding-top: 32px;
+  }
+
+  .columns-intro-list .columns-intro-list-item:last-child {
+    padding-bottom: 32px;
+  }
+}

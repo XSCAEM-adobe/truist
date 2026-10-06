@@ -1,0 +1,128 @@
+/* hero-article: full-bleed-left image with rounded corner, then the reading-column title area */
+main > .section > .hero-article-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.hero-article {
+  --hero-article-column: 880px;
+  --hero-article-page: 1066px;
+}
+
+.hero-article .hero-article-media {
+  margin: 0 16px 0 0;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-article .hero-article-media picture,
+.hero-article .hero-article-media img {
+  display: block;
+  width: 100%;
+}
+
+.hero-article .hero-article-media img {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-article .hero-article-content {
+  position: relative;
+  max-width: var(--hero-article-column);
+  margin: 40px auto 0;
+  padding: 0 16px;
+}
+
+.hero-article.hero-article-no-image .hero-article-content {
+  margin-top: 0;
+}
+
+.hero-article .hero-article-eyebrow {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgb(124 105 146);
+}
+
+.hero-article .hero-article-eyebrow strong,
+.hero-article .hero-article-eyebrow b {
+  font-weight: inherit;
+}
+
+.hero-article h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.25;
+  color: rgb(69 30 106);
+}
+
+.hero-article .hero-article-intro {
+  margin: 30px 0 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: rgb(33 37 41);
+}
+
+/* social-share auto-block moved in from the next wrapper */
+.hero-article .hero-article-content > .social-share-wrapper {
+  max-width: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+@media (width >= 600px) {
+  .hero-article .hero-article-media img {
+    aspect-ratio: 21 / 9;
+  }
+
+  .hero-article h1 {
+    font-size: 52px;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-article .hero-article-media {
+    margin-right: calc(100% / 12);
+    border-bottom-right-radius: 40px;
+  }
+
+  .hero-article .hero-article-media img {
+    aspect-ratio: auto;
+    height: min(calc((100vw * 11 / 12) / 2.444), 600px);
+  }
+
+  /* reading column: 880px, offset ~15.3% from the left like truist.com */
+  .hero-article .hero-article-content {
+    margin: 82px 0 0 max(20px, min(15.28%, calc(100% - 900px)));
+    padding: 0 20px 0 0;
+  }
+
+  .hero-article .hero-article-eyebrow {
+    font-size: 18px;
+  }
+
+  .hero-article h1 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-article .hero-article-content {
+    padding: 0;
+  }
+
+  /* share rail sits in the left gutter beside the title */
+  .hero-article .hero-article-content > .social-share-wrapper {
+    position: absolute;
+    top: 22px;
+    right: calc(100% + 82px);
+    margin: 0;
+  }
+}

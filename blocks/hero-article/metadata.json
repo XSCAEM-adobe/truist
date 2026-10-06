@@ -1,0 +1,32 @@
+{
+  "variantName": "hero-article",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "article-header",
+    "imagePattern": "large",
+    "structure": "image + title + date line + intro"
+  },
+  "contentPattern": {
+    "structure": "2 rows, 1 column. Row 1: hero image (with alt text). Row 2: H1 title, date-line paragraph ('Money and Mindset | May 2025', bold optional), intro paragraph(s). If the date line is omitted it is built from the Category + Publication Date page metadata. The social share rail is added automatically on article pages; do not author it",
+    "imageCount": 1,
+    "buttonCount": 0
+  },
+  "options": [],
+  "memberVariantIds": [
+    "hero-article"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}

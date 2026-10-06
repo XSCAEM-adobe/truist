@@ -1,0 +1,141 @@
+/* cards-article: dark purple article teaser tiles + white bordered CTA tile */
+.cards-article > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-article .cards-article-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  box-sizing: border-box;
+  border: 2px solid var(--tru-purple-900);
+  border-radius: 4px;
+  padding: 32px 28px 28px;
+  background-color: var(--tru-purple-900);
+  color: #fff;
+}
+
+.cards-article .cards-article-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-article .cards-article-eyebrow {
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: rgb(176 224 226);
+}
+
+.cards-article .cards-article-title {
+  display: -webkit-box;
+  margin: 0 0 12px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cards-article .cards-article-title a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* whole card is clickable through the title link */
+.cards-article .cards-article-linked .cards-article-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.cards-article .cards-article-linked:hover .cards-article-link,
+.cards-article .cards-article-linked .cards-article-link:focus-visible {
+  text-decoration: underline;
+}
+
+.cards-article .cards-article-description {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--body-font-size-m);
+  line-height: 1.45;
+  color: #fff;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.cards-article .cards-article-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 32px 0 0;
+  font-size: var(--body-font-size-m);
+  color: var(--tru-sky-blue-ltr);
+}
+
+/* closing CTA tile */
+.cards-article .cards-article-card.cards-article-cta {
+  justify-content: center;
+  background-color: #fff;
+  color: var(--tru-purple-900);
+}
+
+.cards-article .cards-article-cta h2,
+.cards-article .cards-article-cta h3,
+.cards-article .cards-article-cta h4 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--tru-purple-900);
+}
+
+.cards-article .cards-article-cta p {
+  margin: 0;
+}
+
+.cards-article .cards-article-cta a:any-link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid var(--tru-purple-900);
+  border-radius: 4px;
+  padding: 12px 22px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--tru-purple-900);
+  color: #fff;
+}
+
+.cards-article .cards-article-cta a:any-link:hover,
+.cards-article .cards-article-cta a:any-link:focus {
+  border-color: var(--tru-purple-600);
+  background-color: var(--tru-purple-600);
+  color: #fff;
+}
+
+@media (width >= 600px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 900px) {
+  .cards-article > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+}

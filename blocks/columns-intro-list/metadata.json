@@ -1,0 +1,32 @@
+{
+  "variantName": "columns-intro-list",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "topic-intro-with-links",
+    "imagePattern": "icon",
+    "structure": "icon + title + body + 2 x (eyebrow + title + body + link)"
+  },
+  "contentPattern": {
+    "structure": "1 row, 2 columns: [<p>shield icon</p><h2>Fraud protection starts here</h2><p>body</p> | <p>Personal Banking</p><h3>Stay a step ahead</h3><p>body</p><p><a>Learn more</a></p><hr><p>Small Business</p><h3>Fraud protection starts with preparation</h3><p>body</p><p><a>Learn more</a></p>]",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-intro-list"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:06:17.060Z"
+  }
+}

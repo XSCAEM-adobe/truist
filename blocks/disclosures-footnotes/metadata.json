@@ -1,0 +1,37 @@
+{
+  "variantName": "disclosures-footnotes",
+  "baseBlock": "disclosures",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "purpose": "page-footnotes",
+    "imagePattern": "noimg",
+    "structure": "disclaimer + numbered citations with ids disc{n}"
+  },
+  "contentPattern": {
+    "structure": "One row per paragraph, 1 cell. Row 1 (optional): general disclaimer paragraph with no marker. Each following row: one footnote paragraph starting with a superscript marker, e.g. superscript '1' then the citation text and link. The block gives each footnote an id from its marker (1 -> disc1, 2 -> disc2, † -> disc0, †† -> disc01) so superscript links in the article body pointing to '#disc1' jump to it. Place the block at the end of the article",
+    "imageCount": 0,
+    "buttonCount": 0
+  },
+  "options": [],
+  "memberVariantIds": [
+    "disclosures-footnotes"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      },
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/secured-vs-unsecured-loans",
+        "instanceId": null,
+        "screenshot": null
+      }
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}

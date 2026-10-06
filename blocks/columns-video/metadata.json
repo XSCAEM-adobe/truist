@@ -1,0 +1,32 @@
+{
+  "variantName": "columns-video",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "minimal",
+    "purpose": "video-feature",
+    "imagePattern": "single",
+    "structure": "title + body + CTA + video"
+  },
+  "contentPattern": {
+    "structure": "1 row, 2 columns: [<h2>Take your best shot.</h2><p>body</p><p><strong><a>Start feeling unstoppable</a></strong></p> | <p>poster image</p><p><a>https://fast.wistia.net/embed/iframe/1196j4aayy</a></p>]",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "options": [],
+  "memberVariantIds": [
+    "columns-video"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:05:23.738Z"
+  }
+}

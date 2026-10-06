@@ -1,0 +1,75 @@
+/* columns-sidebar: text column + midnight-purple rounded aside, stacked on mobile */
+.columns-sidebar .columns-sidebar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-sidebar .columns-sidebar-row + .columns-sidebar-row {
+  margin-top: 32px;
+}
+
+.columns-sidebar .columns-sidebar-main > :first-child,
+.columns-sidebar .columns-sidebar-aside > :first-child {
+  margin-top: 0;
+}
+
+.columns-sidebar .columns-sidebar-main > :last-child,
+.columns-sidebar .columns-sidebar-aside > :last-child {
+  margin-bottom: 0;
+}
+
+.columns-sidebar .columns-sidebar-aside {
+  border-radius: var(--card-radius);
+  padding: 24px;
+  background-color: var(--tru-purple-900);
+  color: #fff;
+}
+
+.columns-sidebar .columns-sidebar-aside .columns-sidebar-label {
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.columns-sidebar .columns-sidebar-aside ul,
+.columns-sidebar .columns-sidebar-aside ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.columns-sidebar .columns-sidebar-aside li + li {
+  margin-top: 8px;
+}
+
+.columns-sidebar .columns-sidebar-aside a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns-sidebar .columns-sidebar-row {
+    display: grid;
+    grid-template-columns: minmax(0, 300fr) minmax(0, 550fr);
+    align-items: start;
+    gap: 30px;
+  }
+
+  .columns-sidebar .columns-sidebar-row.columns-sidebar-single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .columns-sidebar .columns-sidebar-aside {
+    padding: 32px;
+  }
+}
+
+/* optional decorative icon above the box label */
+.columns-sidebar .columns-sidebar-icon {
+  margin: 0 0 12px;
+}
+
+.columns-sidebar .columns-sidebar-icon img {
+  display: block;
+  width: auto;
+  height: 48px;
+}

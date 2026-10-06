@@ -1,0 +1,32 @@
+{
+  "variantName": "accordion-transcript",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "dense",
+    "purpose": "video-transcript",
+    "imagePattern": "noimg",
+    "structure": "single toggle + long text"
+  },
+  "contentPattern": {
+    "structure": "1 row, 2 columns: [Transcript | transcript paragraphs (speaker label in bold + line)]",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "options": [],
+  "memberVariantIds": [
+    "accordion-transcript"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      }
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-02T17:05:42.531Z"
+  }
+}

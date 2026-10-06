@@ -1,0 +1,83 @@
+/* callout-box: tinted rounded panel around default content (values from truist.com article callouts) */
+.callout-box {
+  margin: 10px 0 30px;
+  border-radius: var(--card-radius);
+  padding: 20px;
+  background-color: var(--tru-off-white);
+  color: rgb(33 37 41);
+}
+
+.callout-box.mist {
+  background-color: var(--tru-purple-100);
+}
+
+.callout-box .callout-box-body > :first-child {
+  margin-top: 0;
+}
+
+.callout-box .callout-box-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* "The highlights" style heading */
+.callout-box h2,
+.callout-box h4 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--tru-purple-900);
+}
+
+/* "Next steps" / Q&A style heading */
+.callout-box h3 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--tru-purple-900);
+}
+
+.callout-box p,
+.callout-box li {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.callout-box ul,
+.callout-box ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.callout-box li {
+  padding-bottom: 16px;
+}
+
+.callout-box li:last-child {
+  padding-bottom: 0;
+}
+
+@media (width >= 600px) {
+  .callout-box {
+    padding: 20px 37px 30px;
+  }
+
+  .callout-box ul,
+  .callout-box ol {
+    max-width: 90%;
+  }
+}
+
+@media (width >= 900px) {
+  .callout-box h2,
+  .callout-box h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .callout-box h3 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}

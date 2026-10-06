@@ -29,12 +29,34 @@ import {
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
+  // leave headings/images that already belong to an authored block (e.g. hero-login) alone
+  const inBlock = (el) => !!el.closest('main > div > div[class]');
+  if (h1 && picture && (inBlock(h1) || inBlock(picture))) return;
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');
     section.append(buildBlock('hero', { elems: [picture, h1] }));
     main.prepend(section);
   }
+}
+
+/**
+ * Article pages get a social-share rail: inserted right after the hero-article
+ * block (hero-article then moves it beside the title), else at the top of the
+ * first section. Skipped when the author already placed a social-share block.
+ * @param {Element} main The container element
+ */
+function buildSocialShareBlock(main) {
+  if (toClassName(getMetadata('template')) !== 'article') return;
+  if (main.querySelector('.social-share')) return;
+  const block = buildBlock('social-share', '');
+  const heroArticle = main.querySelector(':scope > div > .hero-article');
+  if (heroArticle) {
+    heroArticle.after(block);
+    return;
+  }
+  const firstSection = main.querySelector(':scope > div');
+  if (firstSection) firstSection.prepend(block);
 }
 
 /**
@@ -70,6 +92,12 @@ function buildAutoBlocks(main) {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
+  }
+  try {
+    buildSocialShareBlock(main);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Social share auto block failed', error);
   }
 }
 

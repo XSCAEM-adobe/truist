@@ -1,0 +1,58 @@
+{
+  "variantName": "table",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light (purple header row)",
+    "density": "medium",
+    "purpose": "data-table",
+    "imagePattern": "noimg",
+    "structure": "header row + data rows, optional caption and row headers"
+  },
+  "contentPattern": {
+    "structure": "One block row per table row, one cell per column. Row 1 = column headers (the top-left header cell may be left empty), following rows = data. With 'row-headers' the first cell of every data row becomes a row header. With 'caption' the paragraph typed directly above the block becomes the table caption. Typical use: Table (striped), or Table (striped, row-headers, caption) for comparison tables",
+    "imageCount": 0,
+    "buttonCount": 0
+  },
+  "options": [
+    {
+      "class": "striped",
+      "label": "Striped rows"
+    },
+    {
+      "class": "row-headers",
+      "label": "First column as row headers"
+    },
+    {
+      "class": "caption",
+      "label": "Caption from the paragraph directly above"
+    },
+    {
+      "class": "no-header",
+      "label": "No header row"
+    },
+    {
+      "class": "bordered",
+      "label": "Cell borders"
+    }
+  ],
+  "memberVariantIds": [
+    "table"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      },
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/secured-vs-unsecured-loans",
+        "instanceId": null,
+        "screenshot": null
+      }
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}

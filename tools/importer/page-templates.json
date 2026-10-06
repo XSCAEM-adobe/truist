@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.truist.com/"
+      ],
+      "representativeUrl": "https://www.truist.com/",
+      "description": "To be named in naming step",
+      "blocks": [
+        {
+          "name": "hero-login",
+          "instances": [
+            ".custom-herobanner .hero-login-component"
+          ]
+        },
+        {
+          "name": "cards-shortcuts",
+          "instances": [
+            ".cro-personalization-slider-desktop .itemslider"
+          ]
+        },
+        {
+          "name": "cards-promo-mosaic",
+          "instances": [
+            ".merch-two-col .merch-section"
+          ]
+        },
+        {
+          "name": "cards-offer",
+          "instances": [
+            ".policy_static-cardv2-four-col-border-preset"
+          ]
+        },
+        {
+          "name": "columns-app-promo",
+          "instances": [
+            ".policy_container_mobile-banking-feature-v2 .gridlayout-flex-height"
+          ]
+        },
+        {
+          "name": "columns-video",
+          "instances": [
+            ".radius-40.bg-sky-blue-ltr .grid__border-radius-all-40"
+          ]
+        },
+        {
+          "name": "accordion-transcript",
+          "instances": [
+            ".radius-40.bg-sky-blue-ltr .aem-Grid > .accordion"
+          ]
+        },
+        {
+          "name": "columns-spotlight",
+          "instances": [
+            ".radius-40.bg-mist > .aem-Grid"
+          ]
+        },
+        {
+          "name": "columns-intro-list",
+          "instances": [
+            ".special-ankle > .aem-Grid > .gridlayoutcontainer"
+          ]
+        },
+        {
+          "name": "disclosures-footnotes",
+          "instances": [
+            ".footer-local-disclosure-top-orientation-change"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero with sign-in panel",
+          "selector": [
+            ".custom-herobanner"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-login"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Product shortcuts",
+          "selector": [
+            ".cro-personalization-slider-desktop"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-shortcuts"
+          ],
+          "defaultContent": [
+            ".cro-personalization-slider-desktop h2.tru-one-slider-heading",
+            ".cro-personalization-slider-desktop .text__align--center"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Featured promotions mosaic",
+          "selector": [
+            ".merch-two-col"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-promo-mosaic"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Product offer cards row",
+          "selector": [
+            ".bg-ntrl-white:has(> .aem-Grid > .policy_static-cardv2-four-col-border-preset)",
+            ".homepage-main-content > .aem-Grid > .tp__margin-bottom--lg"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Mobile app promo",
+          "selector": [
+            ".policy_container_mobile-banking-feature-v2"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-app-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Brand video",
+          "selector": [
+            ".radius-40.bg-sky-blue-ltr"
+          ],
+          "style": "teal",
+          "blocks": [
+            "columns-video",
+            "accordion-transcript"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Sponsorship feature (Miami Dolphins)",
+          "selector": [
+            ".radius-40.bg-mist"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-spotlight"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Fraud protection",
+          "selector": [
+            ".special-ankle",
+            ".grid__type--section"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-intro-list"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Page-specific disclosures (footnotes)",
+          "selector": [
+            "footer .footer-local-disclosure-top-orientation-change",
+            ".footer-local-disclosure-top-orientation-change"
+          ],
+          "style": null,
+          "blocks": [
+            "disclosures-footnotes"
+          ],
+          "defaultContent": []
+        }
+      ],
+      "urlPattern": "/"
+    },
+    {
+      "name": "article",
+      "urls": [
+        "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "https://www.truist.com/money-mindset/principles/outsmarting-debt/secured-vs-unsecured-loans"
+      ],
+      "representativeUrl": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+      "description": "Money and Mindset article: title + date line, intro, highlights callout, rich body (headings, lists, tables), Q&A / next-steps callouts, related resources, closing CTA",
+      "blocks": [
+        {
+          "name": "hero-article",
+          "instances": [
+            ".tmp__article--header"
+          ]
+        },
+        {
+          "name": "callout-box",
+          "instances": [
+            ".tmp__article--body .grid__bg-color--light-gray",
+            ".tmp__article--body .grid__bg-color--light-purple",
+            ".tmp__article--body .gridlayoutcontainer:has(> .bg-mist)"
+          ]
+        },
+        {
+          "name": "columns-sidebar",
+          "instances": [
+            ".tmp__article--body > .aem-Grid > .responsivegrid > .aem-Grid > .gridlayoutcontainer:has(.grid__bg-color--midnight-purple)"
+          ]
+        },
+        {
+          "name": "table",
+          "instances": [
+            ".tmp__article--body table"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".tmp__article--related-resources .cmp-articlecards-list"
+          ]
+        },
+        {
+          "name": "disclosures-footnotes",
+          "instances": [
+            "footer .footer-local-disclosure-top-orientation-change",
+            ".footer-local-disclosure-top-orientation-change"
+          ]
+        }
+      ],
+      "urlPattern": "/money-mindset/principles/outsmarting-debt/*",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article header",
+          "selector": [
+            ".tmp__article--hero--container",
+            ".tmp__article--header"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Article body",
+          "selector": [
+            ".tmp__article--body"
+          ],
+          "style": null,
+          "blocks": [
+            "callout-box",
+            "columns-sidebar",
+            "table"
+          ],
+          "defaultContent": [
+            ".tmp__article--body > .aem-Grid > .responsivegrid > .aem-Grid > .text"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Related resources",
+          "selector": [
+            ".tmp__article--related-resources"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            ".tmp__article--related-resources .text h2"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Page-specific disclosures (footnotes)",
+          "selector": [
+            "footer .footer-local-disclosure-top-orientation-change",
+            ".footer-local-disclosure-top-orientation-change"
+          ],
+          "style": null,
+          "blocks": [
+            "disclosures-footnotes"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

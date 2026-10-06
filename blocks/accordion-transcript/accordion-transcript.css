@@ -1,0 +1,75 @@
+/* accordion-transcript — Truist video transcript toggle (sits under the video in the teal panel) */
+.accordion-transcript .accordion-transcript-item {
+  margin: 0;
+}
+
+.accordion-transcript .accordion-transcript-item-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 0;
+  color: var(--tru-purple-900);
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.accordion-transcript .accordion-transcript-item-label p {
+  margin: 0;
+}
+
+.accordion-transcript .accordion-transcript-item-label::-webkit-details-marker {
+  display: none;
+}
+
+/* caret after the label */
+.accordion-transcript .accordion-transcript-item-label::after {
+  content: '';
+  display: inline-block;
+  order: 2;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.accordion-transcript .accordion-transcript-item[open] > .accordion-transcript-item-label::after {
+  margin-top: 4px;
+  transform: rotate(-135deg);
+}
+
+.accordion-transcript .accordion-transcript-item-body {
+  max-height: 400px;
+  margin-top: 12px;
+  border-radius: 10px;
+  padding: 16px 20px;
+  overflow-y: auto;
+  background-color: #fff;
+  color: var(--tru-gray-600);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.accordion-transcript .accordion-transcript-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-transcript .accordion-transcript-line {
+  margin: 0 0 8px;
+}
+
+.accordion-transcript .accordion-transcript-speaker {
+  color: var(--tru-purple-900);
+  font-weight: 700;
+}
+
+/* inside the video panel the transcript lines up under the video column */
+@media (width >= 900px) {
+  main .section.teal .accordion-transcript {
+    margin-left: calc((100% - 57px) * 398 / 1081 + 57px);
+  }
+}

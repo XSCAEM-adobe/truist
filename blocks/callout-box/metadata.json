@@ -1,0 +1,42 @@
+{
+  "variantName": "callout-box",
+  "baseBlock": "callout",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light (grey | mist option)",
+    "density": "minimal",
+    "purpose": "article-callout",
+    "imagePattern": "noimg",
+    "structure": "heading + list | heading + paragraph"
+  },
+  "contentPattern": {
+    "structure": "1 row, 1 cell containing ordinary default content: a heading (H2/H3, e.g. 'The highlights', 'Next steps', 'Question: ...') followed by a bulleted list or paragraphs ('Answer: ...'). Inline links and superscript footnote links are allowed. Default background is light grey; add the 'mist' option for the lavender tint",
+    "imageCount": 0,
+    "buttonCount": 0
+  },
+  "options": [
+    {
+      "class": "mist",
+      "label": "Mist (lavender background)"
+    }
+  ],
+  "memberVariantIds": [
+    "callout-box"
+  ],
+  "usage": {
+    "pagesUsing": [
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/how-when-to-consolidate-debt",
+        "instanceId": null,
+        "screenshot": "migration-work/screenshot.png"
+      },
+      {
+        "url": "https://www.truist.com/money-mindset/principles/outsmarting-debt/secured-vs-unsecured-loans",
+        "instanceId": null,
+        "screenshot": null
+      }
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-05T00:00:00.000Z"
+  }
+}
