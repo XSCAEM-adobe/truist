@@ -60,6 +60,12 @@ header nav a:hover {
   text-decoration: none;
 }
 
+header nav a:any-link,
+header nav button {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
 header nav button {
   font-family: inherit;
   cursor: pointer;
@@ -862,9 +868,19 @@ header nav .nav-main > .nav-cta[aria-expanded='true'] + .nav-dropdown {
   padding: 8px 0;
 }
 
-/* ---------- desktop ---------- */
+/* ---------- tablet / small laptop (900–1199px): compact bar like truist.com ---------- */
 
 @media (width >= 900px) {
+  /* the fixed Open Account bar is phone-only; the full menu takes over at 1200px */
+  header nav .nav-main > .nav-cta,
+  header nav .nav-main > .nav-dropdown {
+    display: none;
+  }
+}
+
+/* ---------- desktop ---------- */
+
+@media (width >= 1200px) {
   header nav .nav-hamburger {
     display: none;
   }

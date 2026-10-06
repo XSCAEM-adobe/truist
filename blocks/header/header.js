@@ -1,8 +1,8 @@
 import { loadCSS } from '../../scripts/aem.js';
 import { buildSignInPanel } from '../hero-login/hero-login.js';
 
-// desktop layout starts at 900px (mobile-first; hamburger below)
-const isDesktop = window.matchMedia('(width >= 900px)');
+// full desktop menu from 1200px (mobile-first; compact bar + hamburger below, as on truist.com)
+const isDesktop = window.matchMedia('(width >= 1200px)');
 const SIGN_IN_RE = /^sign\s*in$/i;
 
 const SECTION_ORDER = ['utility', 'brand', 'sections', 'tools'];
