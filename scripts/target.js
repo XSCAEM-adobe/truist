@@ -6,6 +6,21 @@ export function isUePreviewHost(hostname = window.location.hostname) {
 }
 
 /**
+ * DA live preview (?dapreview) re-runs loadPage on every edit and waits for it to finish;
+ * skip Target there so personalization never rewrites the authored content.
+ */
+export function isDaPreview() {
+  return new URL(window.location.href).searchParams.has('dapreview');
+}
+
+// Target calls must never block page loading: with delivery disabled at.js never answers
+const TARGET_TIMEOUT_MS = 3000;
+
+function withTimeout(promise, ms = TARGET_TIMEOUT_MS) {
+  return Promise.race([promise, new Promise((resolve) => { setTimeout(resolve, ms); })]);
+}
+
+/**
  * @param {unknown} e
  * @param {Element} [el]
  */
@@ -15,7 +30,7 @@ function logTargetError(e, el) {
 }
 
 export async function loadTarget() {
-  if (isUePreviewHost()) return;
+  if (isUePreviewHost() || isDaPreview()) return;
   const targetMeta = getMetadata('target');
   if (!targetMeta) return;
 
@@ -29,15 +44,15 @@ export async function loadTarget() {
   try {
     await import('../deps/at/at.js');
     const pageLoadRequest = { execute: { pageLoad: {} } };
-    const offers = await window.adobe.target.getOffers({
+    const offers = await withTimeout(window.adobe.target.getOffers({
       request: pageLoadRequest,
-    });
+    }));
 
     if (typeof window.adobe.target.applyOffers === 'function') {
-      await window.adobe.target.applyOffers({
+      await withTimeout(window.adobe.target.applyOffers({
         request: pageLoadRequest,
         response: offers,
-      });
+      }));
     } else {
       offers?.execute?.pageLoad?.options?.forEach((opt) => {
         const payload = opt?.content?.[0];
@@ -58,7 +73,7 @@ export async function loadTarget() {
  * Opt-in via meta target-mbox-hero and optional target-mbox-hero-selector.
  */
 export async function applyTargetHeroMboxIfConfigured() {
-  if (isUePreviewHost()) return;
+  if (isUePreviewHost() || isDaPreview()) return;
   const mbox = getMetadata('target-mbox-hero')?.trim();
   if (!mbox) return;
 
@@ -78,7 +93,7 @@ export async function applyTargetHeroMboxIfConfigured() {
     return null;
   };
 
-  await new Promise((resolve) => {
+  await withTimeout(new Promise((resolve) => {
     t.getOffer({
       mbox,
       success(offers) {
@@ -92,5 +107,5 @@ export async function applyTargetHeroMboxIfConfigured() {
       },
       error: resolve,
     });
-  });
+  }));
 }
